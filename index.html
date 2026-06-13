@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SiteBuddy – Professional Websites For Local Businesses. Launch your business online starting at ₹249/month." />
+  <meta name="keywords" content="website design, local business website, affordable website, digital agency India" />
+  <title>SiteBuddy – Your Digital Growth Partner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">SiteBuddy</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <!-- Floating Particles Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Site<span>Buddy</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta" onclick="openWhatsApp()">Get Started</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="badge-dot"></span>
+          ✦ Trusted by 100+ Local Businesses
+        </div>
+        <h1 class="hero-title reveal">
+          Professional Websites<br />
+          <span class="gradient-text">For Local Businesses</span>
+        </h1>
+        <p class="hero-subtitle reveal">
+          Launch your business online with a modern website starting at just <strong>₹249/month.</strong><br />
+          We handle everything — from design to hosting to growth.
+        </p>
+        <div class="hero-buttons reveal">
+          <button class="btn-primary" onclick="openWhatsApp()">
+            <span>Get Your Website</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <a href="#portfolio" class="btn-secondary">
+            <span>View Our Work</span>
+          </a>
+        </div>
+        <div class="hero-trust reveal">
+          <div class="trust-avatars">
+            <div class="avatar">R</div>
+            <div class="avatar">P</div>
+            <div class="avatar">A</div>
+            <div class="avatar">S</div>
+          </div>
+          <p>4.9★ from 100+ happy clients</p>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="mockup-3d">
+          <div class="mockup-screen">
+            <div class="mockup-browser">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <div class="browser-url">sitebuddy.in/your-business</div>
+              </div>
+              <div class="browser-content">
+                <div class="demo-nav"></div>
+                <div class="demo-hero">
+                  <div class="demo-h1"></div>
+                  <div class="demo-h2"></div>
+                  <div class="demo-btn"></div>
+                </div>
+                <div class="demo-cards">
+                  <div class="demo-card"></div>
+                  <div class="demo-card"></div>
+                  <div class="demo-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-phone">
+            <div class="phone-screen">
+              <div class="phone-content">
+                <div class="phone-nav"></div>
+                <div class="phone-hero"></div>
+                <div class="phone-card"></div>
+                <div class="phone-card"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Floating badges -->
+          <div class="float-badge badge-seo">
+            <span>🚀</span> SEO Ready
+          </div>
+          <div class="float-badge badge-mobile">
+            <span>📱</span> Mobile First
+          </div>
+          <div class="float-badge badge-ssl">
+            <span>🔒</span> SSL Secured
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats">
+    <div class="stats-container">
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="50">0</div>
+        <div class="stat-label">Websites Delivered</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="99" data-suffix=".9%">0</div>
+        <div class="stat-label">Uptime Guarantee</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="7" data-suffix=" Days">0</div>
+        <div class="stat-label">Avg. Delivery Time</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-prefix="₹" data-target="249" data-suffix="/mo">0</div>
+        <div class="stat-label">Starting Price</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">What We Do</div>
+        <h2 class="section-title">Everything Your Business Needs<br /><span class="gradient-text">Under One Roof</span></h2>
+        <p class="section-desc">From websites to social media — we handle your entire digital presence so you can focus on your business.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon">🌐</div>
+          <h3>Website Development</h3>
+          <p>Beautiful, fast websites that convert visitors into customers.</p>
+          <ul>
+            <li>Business Websites</li>
+            <li>Startup Websites</li>
+            <li>Portfolio Websites</li>
+            <li>Landing Pages</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" data-delay="100">
+          <div class="service-icon">🖥️</div>
+          <h3>Domain & Hosting</h3>
+          <p>Reliable hosting with free SSL and blazing fast speeds.</p>
+          <ul>
+            <li>Domain Registration</li>
+            <li>Fast Hosting</li>
+            <li>SSL Setup</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" data-delay="200">
+          <div class="service-icon">🔧</div>
+          <h3>Website Maintenance</h3>
+          <p>We keep your website updated, secure, and always running.</p>
+          <ul>
+            <li>Monthly Updates</li>
+            <li>Technical Support</li>
+            <li>Website Backup</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon">📍</div>
+          <h3>Google Business Setup</h3>
+          <p>Show up on Google Maps and attract local customers.</p>
+          <ul>
+            <li>Google Maps Listing</li>
+            <li>Business Profile Setup</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" data-delay="100">
+          <div class="service-icon">💬</div>
+          <h3>WhatsApp Business</h3>
+          <p>Connect with customers instantly via WhatsApp integration.</p>
+          <ul>
+            <li>Click-To-Chat Button</li>
+            <li>Business Integration</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" data-delay="200">
+          <div class="service-icon">📸</div>
+          <h3>Social Media Management</h3>
+          <p>Consistent, engaging content that grows your audience.</p>
+          <ul>
+            <li>Instagram Management</li>
+            <li>Facebook Management</li>
+            <li>Content Posting</li>
+            <li>Reels Strategy</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon">📣</div>
+          <h3>Social Media Marketing</h3>
+          <p>Run targeted ads that bring real leads to your business.</p>
+          <ul>
+            <li>Instagram Promotion</li>
+            <li>Facebook Marketing</li>
+            <li>Lead Generation</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" data-delay="100">
+          <div class="service-icon">🎨</div>
+          <h3>Graphic Design</h3>
+          <p>Stunning visuals that make your brand unforgettable.</p>
+          <ul>
+            <li>Posters & Banners</li>
+            <li>Social Media Creatives</li>
+            <li>Business Graphics</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" data-delay="200">
+          <div class="service-icon">✨</div>
+          <h3>Logo Design</h3>
+          <p>A unique brand identity that speaks to your audience.</p>
+          <ul>
+            <li>Modern Logos</li>
+            <li>Brand Identity</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon">🔍</div>
+          <h3>SEO Optimization</h3>
+          <p>Rank higher on Google and get found by local customers.</p>
+          <ul>
+            <li>Local SEO</li>
+            <li>On-Page SEO</li>
+            <li>Google Ranking</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal service-card--featured" data-delay="100">
+          <div class="service-icon">🤖</div>
+          <h3>AI Business Solutions</h3>
+          <p>Automate your business with intelligent AI tools.</p>
+          <ul>
+            <li>AI Chatbots</li>
+            <li>Customer Support Automation</li>
+            <li>Business Automation</li>
+          </ul>
+          <div class="service-badge">New</div>
+        </div>
+
+        <div class="service-card reveal" data-delay="200">
+          <div class="service-icon">🛒</div>
+          <h3>E-Commerce Development</h3>
+          <p>Sell online with a powerful, mobile-ready store.</p>
+          <ul>
+            <li>Online Store Setup</li>
+            <li>Product Catalog</li>
+            <li>Payment Gateway</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Why SiteBuddy</div>
+        <h2 class="section-title">Built for Indian<br /><span class="gradient-text">Local Businesses</span></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal"><span>💰</span><h4>Affordable Pricing</h4><p>Premium quality at prices made for local businesses.</p></div>
+        <div class="why-card reveal"><span>⚡</span><h4>Fast Delivery</h4><p>Your website goes live in 3–7 days, guaranteed.</p></div>
+        <div class="why-card reveal"><span>📱</span><h4>Mobile Friendly</h4><p>Every site works flawlessly on phones and tablets.</p></div>
+        <div class="why-card reveal"><span>🔒</span><h4>Secure Hosting</h4><p>Free SSL, daily backups, and 99.9% uptime.</p></div>
+        <div class="why-card reveal"><span>🎯</span><h4>SEO Ready</h4><p>Built to rank on Google right from day one.</p></div>
+        <div class="why-card reveal"><span>💬</span><h4>WhatsApp Integration</h4><p>One-tap contact button connects you to customers.</p></div>
+        <div class="why-card reveal"><span>📊</span><h4>Social Media Support</h4><p>We manage your online presence end to end.</p></div>
+        <div class="why-card reveal"><span>🤝</span><h4>Lifetime Guidance</h4><p>We're your long-term digital growth partner.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Pricing Plans</div>
+        <h2 class="section-title">Simple, Transparent<br /><span class="gradient-text">Pricing</span></h2>
+        <p class="section-desc">No hidden fees. No surprises. Just results.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <div class="pricing-card reveal">
+          <div class="pricing-name">Starter Website</div>
+          <div class="pricing-price">
+            <span class="price-setup">₹999 setup</span>
+            <div class="price-monthly"><span class="price-amount">₹249</span><span class="price-period">/month</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li>✓ 5-Page Business Website</li>
+            <li>✓ Mobile Responsive Design</li>
+            <li>✓ WhatsApp Chat Button</li>
+            <li>✓ Basic SEO Setup</li>
+            <li>✓ SSL Certificate</li>
+            <li>✓ 1 Year Hosting Included</li>
+            <li>✓ Monthly Maintenance</li>
+          </ul>
+          <button class="pricing-btn" onclick="openWhatsApp('Starter Website')">Get Started</button>
+        </div>
+
+        <div class="pricing-card pricing-card--popular reveal">
+          <div class="pricing-popular-badge">Most Popular</div>
+          <div class="pricing-name">Business Website</div>
+          <div class="pricing-price">
+            <span class="price-setup">₹1999 setup</span>
+            <div class="price-monthly"><span class="price-amount">₹249</span><span class="price-period">/month</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li>✓ 10-Page Premium Website</li>
+            <li>✓ Custom Design & Branding</li>
+            <li>✓ WhatsApp + Call Integration</li>
+            <li>✓ Advanced SEO Setup</li>
+            <li>✓ Google Business Setup</li>
+            <li>✓ SSL + Daily Backups</li>
+            <li>✓ Priority Support</li>
+            <li>✓ Blog/Gallery Section</li>
+          </ul>
+          <button class="pricing-btn pricing-btn--primary" onclick="openWhatsApp('Business Website')">Get Started</button>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div class="pricing-name">Business Growth Package</div>
+          <div class="pricing-price">
+            <span class="price-setup">Website + Social Media</span>
+            <div class="price-monthly"><span class="price-amount">₹1,499</span><span class="price-period">/month</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li>✓ Full Business Website</li>
+            <li>✓ Instagram Management</li>
+            <li>✓ Facebook Management</li>
+            <li>✓ 20 Posts/Month</li>
+            <li>✓ Reels Strategy</li>
+            <li>✓ Monthly Performance Report</li>
+            <li>✓ WhatsApp Support</li>
+          </ul>
+          <button class="pricing-btn" onclick="openWhatsApp('Business Growth Package')">Get Started</button>
+        </div>
+
+        <div class="pricing-card pricing-card--custom reveal">
+          <div class="pricing-name">Premium Package</div>
+          <div class="pricing-price">
+            <span class="price-setup">Everything included</span>
+            <div class="price-monthly"><span class="price-amount">Custom</span><span class="price-period"> pricing</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li>✓ E-Commerce / Custom Website</li>
+            <li>✓ Full Social Media Management</li>
+            <li>✓ Paid Ads Campaign</li>
+            <li>✓ AI Chatbot Integration</li>
+            <li>✓ SEO + Google Ads</li>
+            <li>✓ Logo & Brand Design</li>
+            <li>✓ Dedicated Account Manager</li>
+          </ul>
+          <button class="pricing-btn" onclick="openWhatsApp('Premium Package')">Get Quote</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Our Work</div>
+        <h2 class="section-title">Websites That<br /><span class="gradient-text">Drive Results</span></h2>
+        <p class="section-desc">Real projects for real businesses across India.</p>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card reveal" data-delay="0">
+          <div class="portfolio-img portfolio-img--restaurant">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Restaurant</span>
+              <h4>Spice Garden</h4>
+              <p>Online menu + table booking</p>
+              <button onclick="openWhatsApp('Restaurant Website')" class="portfolio-cta">Build Similar →</button>
+            </div>
+            <div class="portfolio-mockup">
+              <div class="pm-nav"></div>
+              <div class="pm-hero"><div class="pm-h1"></div><div class="pm-h2"></div></div>
+              <div class="pm-row"><div class="pm-item"></div><div class="pm-item"></div><div class="pm-item"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" data-delay="100">
+          <div class="portfolio-img portfolio-img--gym">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Gym & Fitness</span>
+              <h4>PowerFit Studio</h4>
+              <p>Membership plans + class schedule</p>
+              <button onclick="openWhatsApp('Gym Website')" class="portfolio-cta">Build Similar →</button>
+            </div>
+            <div class="portfolio-mockup">
+              <div class="pm-nav"></div>
+              <div class="pm-hero pm-hero--dark"><div class="pm-h1"></div><div class="pm-h2"></div></div>
+              <div class="pm-row"><div class="pm-item"></div><div class="pm-item"></div><div class="pm-item"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" data-delay="200">
+          <div class="portfolio-img portfolio-img--salon">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Beauty & Salon</span>
+              <h4>Glow & Style</h4>
+              <p>Appointment booking + gallery</p>
+              <button onclick="openWhatsApp('Salon Website')" class="portfolio-cta">Build Similar →</button>
+            </div>
+            <div class="portfolio-mockup">
+              <div class="pm-nav"></div>
+              <div class="pm-hero pm-hero--pink"><div class="pm-h1"></div><div class="pm-h2"></div></div>
+              <div class="pm-row"><div class="pm-item"></div><div class="pm-item"></div><div class="pm-item"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" data-delay="0">
+          <div class="portfolio-img portfolio-img--coaching">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Education</span>
+              <h4>BrightMind Classes</h4>
+              <p>Course catalog + admission form</p>
+              <button onclick="openWhatsApp('Coaching Website')" class="portfolio-cta">Build Similar →</button>
+            </div>
+            <div class="portfolio-mockup">
+              <div class="pm-nav"></div>
+              <div class="pm-hero pm-hero--blue"><div class="pm-h1"></div><div class="pm-h2"></div></div>
+              <div class="pm-row"><div class="pm-item"></div><div class="pm-item"></div><div class="pm-item"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" data-delay="100">
+          <div class="portfolio-img portfolio-img--realestate">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Real Estate</span>
+              <h4>HomeNest Realty</h4>
+              <p>Property listings + contact forms</p>
+              <button onclick="openWhatsApp('Real Estate Website')" class="portfolio-cta">Build Similar →</button>
+            </div>
+            <div class="portfolio-mockup">
+              <div class="pm-nav"></div>
+              <div class="pm-hero pm-hero--green"><div class="pm-h1"></div><div class="pm-h2"></div></div>
+              <div class="pm-row"><div class="pm-item"></div><div class="pm-item"></div><div class="pm-item"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" data-delay="200">
+          <div class="portfolio-img portfolio-img--medical">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Healthcare</span>
+              <h4>CareFirst Clinic</h4>
+              <p>Doctor profiles + appointment system</p>
+              <button onclick="openWhatsApp('Medical Website')" class="portfolio-cta">Build Similar →</button>
+            </div>
+            <div class="portfolio-mockup">
+              <div class="pm-nav"></div>
+              <div class="pm-hero pm-hero--teal"><div class="pm-h1"></div><div class="pm-h2"></div></div>
+              <div class="pm-row"><div class="pm-item"></div><div class="pm-item"></div><div class="pm-item"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Client Reviews</div>
+        <h2 class="section-title">What Our Clients<br /><span class="gradient-text">Say About Us</span></h2>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"SiteBuddy built our restaurant website in just 5 days! The design is beautiful and we're getting online orders now. Best investment for our business."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">R</div>
+            <div>
+              <strong>Rajesh Kumar</strong>
+              <span>Spice Garden Restaurant, Pune</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Very professional team. They set up our Google Business profile and now we appear on the first page of Google Maps. Our enquiries have doubled!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">P</div>
+            <div>
+              <strong>Priya Sharma</strong>
+              <span>Glow & Style Salon, Mumbai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"The pricing is very affordable and the quality is excellent. They also manage our Instagram and Facebook — our followers have grown 3x in 2 months!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <strong>Amit Patil</strong>
+              <span>PowerFit Gym, Nashik</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"I was worried about the technical stuff but SiteBuddy handled everything — domain, hosting, WhatsApp button. Now students book admissions online!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div>
+              <strong>Sunita Deshpande</strong>
+              <span>BrightMind Classes, Aurangabad</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"The e-commerce website they built helped us start selling nationally. The payment gateway setup was seamless and customer support is always responsive."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">V</div>
+            <div>
+              <strong>Vijay Mehta</strong>
+              <span>HomeNest Realty, Nagpur</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Excellent work on our clinic website! Online appointment booking has saved us so much time. Patients can now find us easily on Google. Highly recommended."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">D</div>
+            <div>
+              <strong>Dr. Deepak Joshi</strong>
+              <span>CareFirst Clinic, Kolhapur</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">FAQ</div>
+        <h2 class="section-title">Common Questions<br /><span class="gradient-text">Answered</span></h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>How much does a website cost?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Our Starter Website begins at just ₹999 setup + ₹249/month. The Business Website is ₹1999 setup + ₹249/month. Pricing depends on your requirements — we offer custom quotes for larger projects. Contact us on WhatsApp for an exact quote for your business.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>How long does it take to build a website?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Most websites are delivered within 3–7 working days. Once you share your business details, photos, and content, we get started immediately. E-commerce and larger custom projects may take 10–15 days.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Do you provide domain and hosting?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! All our plans include fast, reliable hosting with free SSL certificate. We also help you register a .com or .in domain name for your business. Everything is managed by us — you don't need any technical knowledge.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Can you manage our social media too?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely! Our Business Growth Package (₹1,499/month) includes full Instagram and Facebook management with 20 posts/month, reels strategy, and monthly reports. We also run paid ad campaigns for lead generation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Is ongoing support included?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! All monthly plans include ongoing technical support via WhatsApp. We handle updates, minor changes, and fixes as part of your maintenance plan. You'll always have a dedicated point of contact for any queries.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Get In Touch</div>
+        <h2 class="section-title">Let's Build Your<br /><span class="gradient-text">Dream Website</span></h2>
+        <p class="section-desc">Fill in your details and we'll reach out on WhatsApp within minutes.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info reveal">
+          <h3>Get your website live in 7 days</h3>
+          <p>We've helped 100+ local businesses in Maharashtra grow their digital presence. Tell us about your business and we'll craft the perfect solution for you.</p>
+          <div class="contact-details">
+            <a href="tel:+917709163223" class="contact-item">
+              <span>📞</span>
+              <div>
+                <strong>Call / WhatsApp</strong>
+                <span>+91 7709163223</span>
+              </div>
+            </a>
+            <a href="https://wa.me/917709163223" target="_blank" class="contact-item">
+              <span>💬</span>
+              <div>
+                <strong>Chat on WhatsApp</strong>
+                <span>Click to start chat</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <div class="contact-form-card">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="name" placeholder="Rajesh Kumar" />
+            </div>
+            <div class="form-group">
+              <label>Business Name</label>
+              <input type="text" id="business" placeholder="My Business Name" />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="phone" placeholder="+91 99999 99999" />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="email" placeholder="you@business.com" />
+            </div>
+            <div class="form-group">
+              <label>Tell us about your project</label>
+              <textarea id="message" placeholder="I need a website for my restaurant / gym / salon..."></textarea>
+            </div>
+            <button class="btn-primary full-width" id="submit-btn" onclick="submitForm()">
+              <span>Send on WhatsApp</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-glow"></div>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Site<span>Buddy</span></div>
+          <p>Your Digital Growth Partner. Helping local businesses thrive online with affordable, professional digital solutions.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" onclick="return false;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" onclick="return false;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" onclick="return false;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://wa.me/917709163223" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Website Development</a></li>
+            <li><a href="#services">Social Media</a></li>
+            <li><a href="#services">SEO Optimization</a></li>
+            <li><a href="#services">Logo Design</a></li>
+            <li><a href="#services">E-Commerce</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+917709163223">📞 +91 7709163223</a></li>
+            <li><a href="https://wa.me/917709163223" target="_blank">💬 WhatsApp Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 SiteBuddy. All Rights Reserved.</p>
+        <p>Made with ❤️ for Local Businesses in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a class="whatsapp-float" href="https://wa.me/917709163223?text=Hello%20SiteBuddy%2C%0A%0AI%20want%20a%20website%20for%20my%20business.%0A%0APlease%20contact%20me." target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-pulse"></span>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Success Overlay -->
+  <div class="success-overlay" id="success-overlay">
+    <div class="success-card">
+      <div class="success-icon">✓</div>
+      <h3>Redirecting to WhatsApp!</h3>
+      <p>Your message is ready to send.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
