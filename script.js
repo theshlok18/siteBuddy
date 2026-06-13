@@ -5,6 +5,7 @@
 'use strict';
 
 const WA_NUMBER = '917709163223';
+const WA_NUMBER_2 = '919270180492';
 
 /* ============================================
    LOADING SCREEN
@@ -305,10 +306,12 @@ function openWhatsApp(plan) {
   const message = document.getElementById('message')?.value.trim() || '';
 
   const encodedMsg = buildWhatsAppMessage(name, business, phone, email, message, plan);
-  const url = `https://wa.me/${WA_NUMBER}?text=${encodedMsg}`;
+  const url1 = `https://wa.me/${WA_NUMBER}?text=${encodedMsg}`;
+  const url2 = `https://wa.me/${WA_NUMBER_2}?text=${encodedMsg}`;
 
   showSuccess(() => {
-    window.open(url, '_blank');
+    window.open(url1, '_blank');
+    setTimeout(() => window.open(url2, '_blank'), 800);
   });
 }
 
@@ -324,10 +327,12 @@ function submitForm() {
   const email = document.getElementById('email')?.value.trim() || '';
   const message = document.getElementById('message')?.value.trim() || '';
   const encodedMsg = buildWhatsAppMessage(name, business, phone, email, message, '');
-  const url = `https://wa.me/${WA_NUMBER}?text=${encodedMsg}`;
+  const url1 = `https://wa.me/${WA_NUMBER}?text=${encodedMsg}`;
+  const url2 = `https://wa.me/${WA_NUMBER_2}?text=${encodedMsg}`;
 
   showSuccess(() => {
-    window.open(url, '_blank');
+    window.open(url1, '_blank');
+    setTimeout(() => window.open(url2, '_blank'), 800);
   });
 }
 
